@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+</head>
+<body>
+    <h1>Test de l'inscription</h1>
+    <div id="result"></div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        console.log('jQuery loaded:', typeof $ !== 'undefined');
+        console.log('DataManager:', typeof DataManager !== 'undefined');
+        console.log('AuthManager:', typeof AuthManager !== 'undefined');
+        console.log('dataManager:', typeof dataManager !== 'undefined');
+        console.log('authManager:', typeof authManager !== 'undefined');
+        
+        // Test d'inscription
+        if (typeof authManager !== 'undefined') {
+            const result = authManager.register('Test User', 'test@laplateforme.io', 'password123');
+            document.getElementById('result').innerHTML = '<pre>' + JSON.stringify(result, null, 2) + '</pre>';
+        } else {
+            document.getElementById('result').innerHTML = 'ERREUR: authManager non défini';
+        }
+    </script>
+</body>
+</html>

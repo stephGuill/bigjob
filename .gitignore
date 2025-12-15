@@ -1,0 +1,19 @@
+# Fichiers système
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.sublime-*
+
+# Logs
+*.log
+
+# Dépendances (si vous ajoutez Node.js plus tard)
+node_modules/
+package-lock.json
+
+# Build (si vous ajoutez un système de build)
+dist/
+build/
